@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Etch-a-Sketch</title>
+  </head>
+  <body draggable="false">
+    <div class="heading">Etch-A-Sketch</div>
+    <div class="main-container" draggable="false">
+      <div class="button-container">
+        <div class="click-nodes active-mode" id="sketcher">
+          Sketch Mode
+        </div>
+        <div class="click-nodes" id="eraser">Erase Mode</div>
+        <div class="click-nodes" id="clear">Clear</div>
+        <div class="area" id="area-select">
+          <label for="area">Sketchboard Width</label>
+          <input
+            type="range"
+            id="area"
+            name="area"
+            min="16"
+            max="64"
+            step="1"
+          />
+          <div id="widthVal"></div>
+        </div>
+      </div>
+      <div
+        class="draw-container"
+        draggable="false"
+        ondragstart="return false"
+      ></div>
+      <button class="rainbow-mode">Rainbow Mode!</button>
+    </div>
+    <div class="footer">Copyright ©</div>
+  </body>
+</html>
